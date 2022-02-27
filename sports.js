@@ -29,10 +29,9 @@ const searchList = (array) => {
   playersAll.innerHTML = players;
 };
 
-//*seaech e pawa--
+//*From search--
 const searchPlayer = async () => {
   const inputValue = document.getElementById("input").value;
-
   if (inputValue === "" || inputValue < 0 || inputValue >= 0) {
     document.getElementById("para").classList.remove("d-none");
     playersAll.textContent = "";
@@ -53,6 +52,7 @@ const searchPlayer = async () => {
   document.getElementById("input").value = "";
 };
 
+// show the details here
 const details = document.getElementById("details");
 
 const showDetails = (id) => {
@@ -85,3 +85,9 @@ const showDetails = (id) => {
       details.innerHTML = detailsPlayer;
     });
 };
+
+const preLoader = document.getElementById("spinner");
+
+window.addEventListener("load", function () {
+  preLoader.style.display = "none";
+});
